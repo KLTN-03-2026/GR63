@@ -1236,6 +1236,7 @@ const getContracts = async (req, res) => {
         c.allowances,
         c.is_active,
         e.id AS employee_id,
+        e.position_id,
         e.full_name AS employee_name, 
         p.position_name,
         d.department_name,
@@ -1279,6 +1280,8 @@ const getContracts = async (req, res) => {
 
       return {
         id: c.id,
+        employee_id: c.employee_id,
+        position_id: c.position_id,
         contractNumber: c.contract_number,
         employeeName: c.employee_name,
         positionName: c.position_name || 'Chưa cập nhật',
