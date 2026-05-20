@@ -57,7 +57,7 @@ export default function AddEditContract({ contract, onBack, onSaveSuccess }) {
     if (isEdit) {
       setFormData({
         employee_id: contract.employee_id || '',
-        position_id: '', 
+        position_id: contract.position_id || '', 
         contract_type: contract.typeCode || 'probation',
         start_date: contract.startDate ? contract.startDate.split('T')[0] : '',
         end_date: contract.endDate ? contract.endDate.split('T')[0] : '',
